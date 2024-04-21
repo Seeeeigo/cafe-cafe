@@ -26,7 +26,7 @@ $(function() {
             sessionStorage.setItem('location', contactPart);
         } else {
             // 指定の場所までスムーススクロール
-            scrollTo(0, 2000);
+            scrollTo(0, 1700);
         }
     });
     $('#hazimeniMoveSp').on('click', function(){
@@ -64,7 +64,7 @@ $(function() {
             if(button == 'hazime') {
                 scrollTo(0, 900);
             } else if(button == 'taiken') {
-                scrollTo(0, 2350);
+                scrollTo(0, 2150);
             }
         }
         sessionStorage.removeItem('button');
