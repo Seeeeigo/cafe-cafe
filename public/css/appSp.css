@@ -1,0 +1,92 @@
+@media screen and (max-width:896px){
+    .place_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .loc1{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu{
+        display: none;
+    }
+    .sign_in{
+        display: none;
+    }
+    .sp_click{
+        display: block;
+        cursor: pointer;
+    }
+    .sp_click img{
+        width: 50px;
+    }
+    .sp_nav{
+        box-shadow: 0 10px 25px 0 rgba(100, 100, 100, 0.5);
+        position: fixed;
+        top: 125px;
+        width: 12.5rem;
+        background-color: white;
+        border-radius: 8px;
+    }
+    .sp_nav .sp_signin_click{
+        color: black;
+        padding: 0 1rem;
+        border-bottom: 1px solid #ccc;
+    }
+    .sp_menu_click{
+        color: black;
+        padding: 0 1rem;
+    }
+    .sp_nav_active{
+        display: block;
+    }
+    .contact_box{
+        width: 90%;
+    }
+    .signin_box {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:700px){
+    h1{
+        font-size: 48px;
+    }
+    .loc2_text{
+        position: static;
+    }
+    footer{
+        border-top: 1px solid #ddd;
+    }
+    .footer1{
+        display: block;
+    }
+    footer .container h4{
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+@media screen and (max-width:480px){
+    h1{
+        font-size: 32px;
+    }
+    .place_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cafe_info{
+        padding-bottom: 50px;
+    }
+    .info_exp{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .other_box_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .other_info{
+        padding-bottom: 50px;
+    }
+    .contact_box{
+        width: 98%;
+    }
+    .signin_box {
+        width: 80%;
+    }
+}

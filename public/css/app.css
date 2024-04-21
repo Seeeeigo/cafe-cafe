@@ -1,0 +1,550 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	background-color: #f5f5f5;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* headerここから */
+.sp_nav{
+	display: none;
+	position: fixed;
+    top: 125px;
+	right: 30px;
+    width: 12.5rem;
+    background-color: white;
+    border-radius: 8px;
+	height: 200px;
+	line-height: 50px;
+}
+.sp_menu a{
+	text-decoration: none;
+	color: black;
+	padding: 0 1rem;
+}
+.sp_nav .sp_signin_click{
+	color: black;
+	padding: 0 1rem;
+	border-bottom: 1px solid #ccc;
+}
+.sp_menu_click{
+	color: black;
+	padding: 0 1rem;
+}
+.sp_click{
+	display: none;
+}
+.corona{
+	background-color: black;
+	width: 100%;
+	font-size: 14px;
+	padding: 18px;
+	text-align: center;
+	box-shadow: 5px 5px 5px 680px rgba(180,180,180,0.3);
+	position: relative;
+	top: 0;
+	z-index: 1;
+}
+.corona a{
+	color: white;
+	text-decoration: underline;
+}
+header{
+	position: relative;
+	width: 100%;
+	min-height: 750px;
+	background-size: cover;
+	background-position: center;
+	background-image:url(../img/eyecatch.jpg);
+}
+h1{
+	width: 90%;
+	color: white;
+	font-size: 64px;
+	font-weight: bold;
+	position: absolute;
+	top: 250px;
+	left: 5%;
+	line-height: 64px;
+}
+nav{
+	display: flex;
+	color: white;
+	width: 100%;
+	padding: 0 5%;
+	padding-top: 15px;
+	margin: auto;
+}
+.menu{
+	display: flex;
+	line-height: 40px;
+}
+.logo{
+	flex: 25%;
+}
+.menu_button{
+	flex: 50%;
+	justify-content: center;
+}
+.menu_button div{
+	padding: 0 25px;
+	cursor: pointer;
+	display: inline-block;
+}
+.menu_button a{
+	color: white;
+	padding: 0 25px;
+	cursor: pointer;
+}
+.sign_in{
+	display: flex;
+	flex: 25%;
+	line-height: 40px;
+	justify-content: flex-end;
+}
+/* ヘッダーの動き */
+.motion{
+	background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    transition: all .5s ease;
+}
+/* 各セクション設定 */
+section{
+	padding: 40px 5%;
+}
+/* topここから */
+
+/* 車で〇〇分セクションここから */
+.place{
+	background-color: white;
+}
+.place_container{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin: auto;
+}
+.place_box{
+	padding: 10px 0;
+	display: flex;
+}
+.photo{
+	width: 66px;
+	height: 66px;
+}
+.place_box img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+}
+.access{
+	padding: 0 10px;
+}
+.access p{
+	font-weight: bold;
+	font-size: 14px;
+}
+/* locationここから */
+h2{
+	font-size: 32px;
+	font-weight: bold;
+}
+.location{
+	background-color: white;
+}
+.loc1{
+	display: grid;
+	margin: auto;
+	column-gap: 15px;
+	grid-template-columns: repeat(4, 1fr)
+}
+.loc1_box{
+	padding: 10px 0;
+}
+.loc1_box .photo{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+}
+.loc1_box .photo img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+}
+.loc1_box p{
+	font-size:18px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.loc2{
+	margin-top: 60px;
+	position: relative;
+}
+.loc2_text{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	background-color: rgba(255,255,255,0.3);
+	padding: 10px;
+}
+.loc2_text h3{
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+}
+.loc2_text p{
+	font-size: 18px;
+	color: black;
+}
+.loc2 img{
+	width: 100%;
+	border-radius: 16px;
+}
+/* カフェ作り体験ここから */
+.cafe_info{
+	background-color: black;
+	padding-top: 40px;
+	padding-bottom: 100px;
+	color: white;
+
+}
+.cafe_info .text{
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+.info_exp{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 15px auto 0 auto;
+	column-gap: 15px;
+}
+.info_box{
+	padding: 10px 0;
+}
+.info_box .photo{
+	width: 100%;
+	height: 100%;
+	padding-bottom: 10px;
+}
+.info_box img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+}
+/* ホストに仲間入りここから */
+.other_info{
+	background-color: white;
+	padding-bottom: 100px;
+}
+.other_box_container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	object-fit: cover;
+	column-gap: 15px;
+	padding: 10px 0;
+}
+.other_box{
+	width: 100%;
+	height: 100%;
+}
+.other_box .photo{
+	width: 100%;
+	height: 100%;
+}
+.other_box img{
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	object-fit: cover;
+}
+.other_box p{
+	padding: 10px 0;
+	font-weight: bold;
+	font-size: 18px;
+}
+/* footerここから */
+h4{
+	font-weight: bold;
+}
+footer{
+    padding: 4%;
+	background-color: #f7f7f7;
+}
+.footer1{
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid #ddd;
+}
+footer .container{
+	width: 90%;
+	flex-direction: column;
+}
+footer .container ul a{
+	color: black;
+	display: block;
+	margin: 1rem 0;
+}
+.footer2{
+	padding-top: 2%;
+}
+.footer_guide a{
+	text-decoration: none;
+	color: black;
+}
+/* jumpアクションボタン */
+.jump{
+	position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 3rem;
+    line-height: 3rem;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background-color: black;
+    padding: 0 10px;
+	transform: translate(0, 48px);
+	transition: all 0.3s;
+}
+.jump_action{
+	transform: translate(0, -10px);
+	transition: all 0.3s;
+}
+.jump a{
+	color: white;
+	text-decoration: none;
+}
+*{
+	scroll-behavior: smooth;
+}
+/* お問い合わせページ */
+.contact{
+	padding: 0 5%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+    margin-top: 55px;
+	background-color: white;
+}
+.contact_box{
+	width: 70%;
+    margin: 5% auto;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+	background-color: white;
+	
+}
+.contact_box form{
+	margin: 3%;
+}
+.contact_box h2{
+	font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+}
+.contact_box h3{
+	background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eaeaea));
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    padding: 1%;
+    margin: 1% 0;
+}
+.contact_box dl{
+	margin: 2% 0;
+}
+.contact_box .required{
+	color: red;
+}
+.contact_box dd{
+	padding: 0.5% 0 1%;
+    font-size: 1.2rem;
+}
+.contact_box input{
+	width: 100%;
+    font-size: 25px;
+    padding: 10px 2.5px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+.contact_box label{
+	font-size: 20px;
+}
+.contact_box textarea{
+	resize: none;
+    width: 100%;
+    height: 33vh;
+    font-size: 1.2rem;
+    padding: 10px 2.5px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+.contact_box button{
+	color: white;
+    background-color: rgb(215, 4, 102);
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px 2.5px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.error_msg{
+	color: red;
+	font-size: 14px;
+	height: 14px;
+}
+/* confirm.phpここから */
+.confirm dt{
+	margin-top: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+.confirm dd{
+	padding: 1%;
+    font-size: 1.2rem;
+}
+.confirm_btn{
+	padding: 1% 0;
+    display: flex;
+    justify-content: space-between;
+}
+.confirm_btn a{
+	width: 100%;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: 2px solid #066;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #066;
+}
+/* complete.phpここから */
+.comp_msg{
+	padding: 3%;
+}
+.comp_msg a{
+	display: block;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+/* サインインメニューここから */
+.overlay{
+	opacity: 0;
+	z-index: 998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	visibility: hidden;
+	transition: .3s;
+}
+.signin_box{
+	opacity: 0;
+	margin-top: 50vh;
+	z-index: 999;
+    width: 40%;
+    background-color: white;
+	visibility: hidden;
+    border-radius: 12px;
+	transition: .5s;
+}
+.active{
+	opacity: 1;
+	visibility: visible;
+}
+.active2{
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0;
+}
+.signin_box h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+}
+.signin_box dd input {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px 2.5px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+.signin_box dd button {
+    color: white;
+    background-color: rgb(215, 4, 102);
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px 2.5px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.signin_box dl.sns {
+    border-width: 90%;
+    border-top: 1px solid #ccc;
+}
+.signin_box .sns dd button {
+    color: black;
+    background-color: white;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px 2.5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.signin_box .sns dd img {
+    width: 1.5rem;
+	margin: 0 auto;
+}
+.signin_box dl {
+    padding: 20px;
+}
+.signin_box dd {
+    padding: 5px 0;
+}
+.sign_in span{
+	cursor: pointer;
+}
